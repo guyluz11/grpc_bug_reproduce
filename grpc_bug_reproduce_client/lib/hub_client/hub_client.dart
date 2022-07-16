@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:async/async.dart';
 import 'package:grpc/grpc.dart';
@@ -30,8 +31,8 @@ class HubClient {
           .add(ClientStatusRequests(sendingType: SendingType.firstConnection));
 
       HubRequestsToApp.hubRequestsStreamBroadcast.add(response);
-      await Future.delayed(Duration(seconds: 3));
-      // exit(0);
+      await Future.delayed(Duration(seconds: 10));
+      exit(0);
     } catch (e) {
       print('Caught error while stream with hub\n$e');
       await channel?.shutdown();

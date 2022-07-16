@@ -5,7 +5,7 @@ class GrpcBugReproduceClient {
     mimickingClientRequests();
   }
 
-  int hubPort = 50055;
+  int hubPort = 20061;
 
   Future<void> mimickingClientRequests() async {
     HubClient.createStreamWithHub('127.0.0.1', hubPort);

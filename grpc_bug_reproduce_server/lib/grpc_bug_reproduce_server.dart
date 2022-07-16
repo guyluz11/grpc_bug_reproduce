@@ -11,7 +11,7 @@ class StartServer {
 
   /// Port to connect to the cbj hub, will change according to the current
   /// running environment
-  int hubPort = 50055;
+  int hubPort = 20061;
 
   Future startLocalServer() async {
     final server = Server([HubAppServer()]);
@@ -74,9 +74,12 @@ class StartServer {
 
   Future<void> sendDataToClients() async {
     while (true) {
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(Duration(seconds: 5));
       print('Send Test data');
-      HubRequestsToApp.streamRequestsToApp.sink.add('Test data');
+      HubRequestsToApp.streamRequestsToApp.sink.add('Test data1');
+      HubRequestsToApp.streamRequestsToApp.sink.add('Test data2');
+      HubRequestsToApp.streamRequestsToApp.sink.add('Test data3');
+      HubRequestsToApp.streamRequestsToApp.sink.add('Test data4');
     }
   }
 }
