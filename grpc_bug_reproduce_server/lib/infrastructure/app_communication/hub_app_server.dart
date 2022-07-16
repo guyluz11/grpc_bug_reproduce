@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:grpc/service_api.dart';
+import 'package:grpc_bug_reproduce_server_1/grpc_bug_reproduce_server.dart';
 import 'package:grpc_bug_reproduce_server_1/infrastructure/app_communication/app_communication_repository.dart';
 import 'package:grpc_bug_reproduce_server_1/infrastructure/gen/cbj_hub_server/protoc_as_dart/cbj_hub_server.pbgrpc.dart';
 
@@ -18,16 +19,20 @@ class HubAppServer extends CbjHubServiceBase {
     try {
       print('Got new Client');
 
-      request.listen((event) {
-        print('Data from client');
-      });
+      StartServer.getFromApp(
+        request: request,
+        requestUrl: 'Error, Hub does not suppose to have request URL',
+        isRemotePipes: false,
+      );
 
       yield* HubRequestsToApp.streamRequestsToApp.map((dynamic entityDto) {
         return RequestsAndStatusFromHub(
           sendingType: SendingType.deviceType,
           allRemoteCommands: 'Test Data',
         );
-      }).handleError((error) => print('Stream have error $error'));
+      }).handleError((error) {
+        print('Stream have error $error');
+      });
     } catch (e) {
       print('Hub server error $e');
     }

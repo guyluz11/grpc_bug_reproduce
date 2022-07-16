@@ -9,5 +9,8 @@ class GrpcBugReproduceClient {
 
   Future<void> mimickingClientRequests() async {
     HubClient.createStreamWithHub('127.0.0.1', hubPort);
+    HubRequestsToApp.hubRequestsStreamBroadcast.stream.listen((event) {
+      print('Got from hub');
+    });
   }
 }

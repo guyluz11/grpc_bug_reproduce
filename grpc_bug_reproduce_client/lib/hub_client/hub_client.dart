@@ -30,6 +30,8 @@ class HubClient {
           .add(ClientStatusRequests(sendingType: SendingType.firstConnection));
 
       HubRequestsToApp.hubRequestsStreamBroadcast.add(response);
+      await Future.delayed(Duration(seconds: 3));
+      // exit(0);
     } catch (e) {
       print('Caught error while stream with hub\n$e');
       await channel?.shutdown();
