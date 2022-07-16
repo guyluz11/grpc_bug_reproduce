@@ -24,6 +24,10 @@ dependencies:
   protobuf: ^2.1.0
   # Extends the capabilities of Dart Streams and StreamControllers.
   rxdart: ^0.27.5
+  # Contains utility classes in the style of dart:async to work with asynchronous computations.
+  async: ^2.9.0
+  # Allow discover network connectivity
+  connectivity_plus: ^2.3.5
 
 dev_dependencies:
   flutter_lints: ^2.0.1
