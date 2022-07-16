@@ -9,6 +9,9 @@
       <excludeFolder url="file://$MODULE_DIR$/grpc_bug_reproduce_client/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/grpc_bug_reproduce_client/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/grpc_bug_reproduce_client/build" />
+      <excludeFolder url="file://$MODULE_DIR$/grpc_bug_reproduce_client_flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/grpc_bug_reproduce_client_flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/grpc_bug_reproduce_client_flutter/.dart_tool" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
