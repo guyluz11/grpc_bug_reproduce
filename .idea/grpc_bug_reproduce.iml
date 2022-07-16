@@ -6,6 +6,9 @@
       <excludeFolder url="file://$MODULE_DIR$/grpc_bug_reproduce_server/build" />
       <excludeFolder url="file://$MODULE_DIR$/grpc_bug_reproduce_server/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/grpc_bug_reproduce_server/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/grpc_bug_reproduce_client/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/grpc_bug_reproduce_client/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/grpc_bug_reproduce_client/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
